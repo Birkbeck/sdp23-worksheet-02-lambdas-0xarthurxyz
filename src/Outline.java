@@ -2,8 +2,13 @@ import java.util.Arrays;
 
 public class Outline {
   public static void main(String... args) { // varargs alternative to String[]
-    Integer[] intArray = {1,7,3,4,8,2};
-    System.out.println(Arrays.asList(intArray));
-    // Arrays.sort(intArray,.......)
+
+    // Create String array
+    String[] arr = {"hello", "goodbye"};
+
+    // Sort string array
+
+    // Print string array
+    System.out.println( Arrays.toString(arr) );
   } 
 }
