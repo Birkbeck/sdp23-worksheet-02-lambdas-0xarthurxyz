@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.function.Predicate;
 
 public class Outline {
 
@@ -56,10 +57,34 @@ public class Outline {
     System.out.println("Question 1.3: " + Arrays.toString(arr));
   }
 
+  public static void question1_4() {
+    /* Question:
+     * 
+     * Sort by Strings that contain "e" first, everything else second.
+     * 
+     */
+    String[] arr = getArray();
+    Arrays.sort(
+        arr,
+        (a, b) -> {
+            if( !a.contains("e") && b.contains("e") ) {
+              return 1;
+            } else if( a.contains("e") && !b.contains("e") ) {
+              return -1;
+            } else {
+              return 0;
+            }
+        }
+    );
+    System.out.println("Question 1.4: " + Arrays.toString(arr));
+  }
+
+
   public static void main(String... args) { // varargs alternative to String[]
     System.out.println("Input: " + Arrays.toString(getArray()));
     question1_1();
     question1_2();
     question1_3();
+    question1_4();
   }
 }
