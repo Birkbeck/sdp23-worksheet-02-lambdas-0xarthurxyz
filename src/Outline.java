@@ -67,13 +67,9 @@ public class Outline {
     Arrays.sort(
         arr,
         (a, b) -> {
-            if( !a.contains("e") && b.contains("e") ) {
-              return 1;
-            } else if( a.contains("e") && !b.contains("e") ) {
-              return -1;
-            } else {
-              return 0;
-            }
+            if ( !a.contains("e") && b.contains("e") ) { return 1; } 
+            else if ( a.contains("e") && !b.contains("e") ) { return -1; } 
+            else { return 0; }
         }
     );
     System.out.println("Question 1.4: " + Arrays.toString(arr));
