@@ -1,14 +1,19 @@
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Outline {
   public static void main(String... args) { // varargs alternative to String[]
 
     // Create String array
-    String[] arr = {"hello", "goodbye"};
+    String[] arr = {
+      "goodbye",
+      "hello",
+      "good morning",
+      "good afternoon"
+    };
 
-    // Sort string array
-
-    // Print string array
-    System.out.println( Arrays.toString(arr) );
+    // Sort the array by length (i.e., shortest to longest)
+    Arrays.sort(arr, (a, b) -> Integer.compare( a.length(), b.length() ));
+    System.out.println( "Question 1.1: " + Arrays.toString(arr) );
   } 
 }
